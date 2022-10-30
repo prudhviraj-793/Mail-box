@@ -16,14 +16,14 @@ function Login() {
       returnSecureToken: true,
     };
     const response = await login(loginData);
-    const data = await response.json()
+    const data = await response.json();
     try {
       if (!response.ok) {
-        throw data.error.message
+        throw data.error.message;
       }
       navigate("/welcome");
     } catch (error) {
-      alert(error)
+      alert(error);
     }
   }
   return (
